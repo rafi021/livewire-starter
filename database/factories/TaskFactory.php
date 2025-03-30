@@ -18,6 +18,7 @@ class TaskFactory extends Factory
     {
         return [
             'name' => fake()->name(),
+            'due_date' => fake()->date(),
             'is_completed' => fake()->boolean(),
         ];
     }

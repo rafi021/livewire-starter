@@ -20,6 +20,7 @@ Route::middleware(['auth'])->group(function () {
     Volt::route('settings/appearance', 'settings.appearance')->name('settings.appearance');
 
     Route::get('tasks', Tasks\Index::class)->name('tasks.index');
+    Route::get('tasks/create', Tasks\Create::class)->name('tasks.create');
 });
 
 require __DIR__ . '/auth.php';

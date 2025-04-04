@@ -19,7 +19,7 @@ class Index extends Component
     public function render()
     {
         return view('livewire.tasks.index', [
-            'tasks' => Task::latest()->paginate(10),
+            'tasks' => Task::with('media')->latest()->paginate(5),
         ]);
     }
 }
